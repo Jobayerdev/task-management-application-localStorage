@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+body {
+	background: #bc4e9c; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to bottom,
+		#f80759,
+		#bc4e9c
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		#f80759,
+		#bc4e9c
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+}
+.container {
+	background: #fff;
+	height: 70vh;
+	width: 350px;
+	border-radius: 10px;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.date {
+	height: 15%;
+	display: flex;
+	justify-content: start;
+	flex-direction: column;
+}
+
+.input-task {
+	height: 20%;
+}
+
+.task-list {
+	height: 65%;
+}
+
+.date h2 {
+	color: darkslategrey;
+	font-size: 28px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.date h5 {
+	display: block;
+	font-size: 14px;
+	color: #444;
+	font-weight: 400;
+}
+
+.input-task {
+	display: flex;
+	align-items: center;
+}
+:focus {
+	outline: none;
+}
+#input {
+	border: none;
+	background: #ddd;
+	padding: 10px;
+	width: 90%;
+	color: #333;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+}
+
+.btn-add {
+	border: none;
+	background: #f80759;
+	width: 20%;
+	font-size: 24px;
+	color: #ffff;
+	padding: 4px;
+}
+
+.task-list {
+	background: #dddddd00;
+}
+
+.task-list ul {
+	display: flex;
+	justify-content: start;
+	flex-direction: column;
+}
+
+.task-list li {
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+	color: #000;
+	font-weight: 500;
+	background: #dddddd36;
+	margin-bottom: 10px;
+	align-items: center;
+	padding: 5px 10px;
+}
+
+.task-list p {
+	padding: 7px 10px;
+	color: #444;
+	font-weight: 700;
+	font-size: 16px;
+	width: 85%;
+}
+
+.item {
+	position: relative;
+}
+
+.dele {
+	position: absolute;
+	right: -15px;
+	opacity: 0;
+	font-size: 18px;
+	color: rgb(233, 233, 233);
+	background: #f80759bf;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border-radius: 1px;
+	transition: 0.5s all ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+}
+.tick {
+	width: 24px;
+	font-size: 24px;
+	color: #6b4f4f;
+}
+.item:hover .dele {
+	right: 0;
+	opacity: 1;
+}
+
+.task-list {
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+::placeholder {
+	font-size: 12px;
+	font-weight: 300;
+}
+img {
+	height: 15px;
+}
+span.tick img {
+	height: 20px;
+}
